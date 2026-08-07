@@ -24,3 +24,29 @@ eg: cat file.txt
                                                                         Goodbye
                                                                         Goodbye
   - Use ctrl+v to exit out of a cat command
+
+# Absolute and Relative paths
+- A path identifies the location of a file or directory
+
+## Absolute 
+- Absolute paths always start at the root of the file system and ignore your current directory
+- E.g: ls /home/bob/files/notes.txt
+
+## Relative path
+- A relative path starts from your current working directory. It changes depending on where you are
+- E.g: If your current directory is /home/nathi then cd Documents is equivalent to cd /home/nathi/Documents
+- you can also use (.) for relative E.g:
+- Suppose you're in: /home/nathi/Documents/CTF
+. (current directory) ./flag.txt means: /home/nathi/Documents/CTF/flag.txt
+If there's an executable called exploit: ./exploit means "run the exploit program that's in my current directory"
+- ..(parent directory)
+cd .. takes you to /home/nathi/Documents
+cat ../notes.txt means go up one directory, then open notes.txt
+So from: /home/nathi/Documents/CTF it becomes /home/nathi/Documents/notes.txt
+- Another example: ../../ 
+cd ../../ From: /home/nathi/Documents/CTF
+it takes you to: /home/nathi
+
+## When to use absolute and relative paths 
+- If you need a path that is valid from anywhere on the file system use an absolute path
+- Relative paths are shorter and easier to use. Using a relative path assumes that you're in the same directory structure
