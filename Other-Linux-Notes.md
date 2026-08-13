@@ -50,3 +50,22 @@ it takes you to: /home/nathi
 ## When to use absolute and relative paths 
 - If you need a path that is valid from anywhere on the file system use an absolute path
 - Relative paths are shorter and easier to use. Using a relative path assumes that you're in the same directory structure
+
+# Working with Files and Directories 
+- To check the last modified timestamp on the text file use the following command (Please note that note.txt is just an example): ls -l notes.txt
+- To update the modification time use this command: touch notes.txt then execute the previous command again (ls -l notes.txt)
+- If you want to make a copy of a text file use the following command: cp notes.txt notes-copy.txt
+- To specify the destination of the source use the following command: mv notes-copy.txt ./backup
+- If you want to delete the file use this command: rm backup/notes-copy.txt
+- use the mkdir command to create a new directory: mkdir project
+- Use ls to check the newly created directory
+- If you decide to remove the directory use the following command: rmdir project
+- The rmdir command doesnt work if the directory has files or other directories in it. It only works if the directory is empty
+- If you want to delete an empty directory with files then use the rm command used to delete files: rm -rf non-empty-dir/
+- If you need to rename a directory you can use the same mv command used for the file: mv project project01
+
+# Spaces in Paths and Filenames
+- Do not use spaces when naming files. Rather use underscores
+- If you're finding yourself in a situation where you have to use filenames that have spaces in a command you can bypass this command by doing the following:
+  - you can escape the space using a slash like this: (initially the file name is file name.txt) cd file\ name.txt
+  - You can also place the entire name in quotes: ls 'file name.txt' 
