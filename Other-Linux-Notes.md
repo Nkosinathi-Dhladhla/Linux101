@@ -68,4 +68,29 @@ it takes you to: /home/nathi
 - Do not use spaces when naming files. Rather use underscores
 - If you're finding yourself in a situation where you have to use filenames that have spaces in a command you can bypass this command by doing the following:
   - you can escape the space using a slash like this: (initially the file name is file name.txt) cd file\ name.txt
-  - You can also place the entire name in quotes: ls 'file name.txt' 
+  - You can also place the entire name in quotes: ls 'file name.txt'
+ 
+# File and Path Expansion
+- the asterisk can be used to view files that start with a specific string.
+- eg: ls file*.txt will display every file character
+- If you want a file with specific characters you can use the question mark
+- eg: ls file?.txt
+- if you want to match a file with a specific number or letter you can do the following
+- eg: ls file[123] or ls file[a-z]
+
+# Even More Looking at Text Files
+- sometimes we want to view the first few lines of a text file. you can use the head command for this
+- eg: head wordlist.txt
+- or head -n 5 wordlist.txt
+- or head -5 wordlist.txt
+- or tail wordlist.txt, or tail -n 5 wordlist.txt, or tail -5 wordlist.txt
+- The diff command is used to find the difference between two files
+- eg: diff file1.txt file2.txt
+
+# Hard and Soft Filesystem Links
+- A hard link points to the physical location of the file on storage
+- eg: ln hello.txt hello-hard-link.txt
+- Soft link:
+- eg: ln -s ./hello.txt hello-soft-link.txt
+- ls -l hello*
+  
