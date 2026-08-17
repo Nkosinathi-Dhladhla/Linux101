@@ -93,4 +93,29 @@ it takes you to: /home/nathi
 - Soft link:
 - eg: ln -s ./hello.txt hello-soft-link.txt
 - ls -l hello*
+
+# Compressing and archiving files
+- if you want to create a zip file containing the files file1.txt, file2.txt, and file3.txt use the following command:
+- zip tmp/backup-files.zip file1.txt file2.txt file3.txt
+- ls tmp
+- this will display backup-files.zip
+- use the unzip command to unzip a folder
+- unzip -l tmp/backup-files.zip
+- tar (short for Tape Archive) is a standard Linux/Unix utility used to combine multiple files and directories into a single archive file. By itself, tar does not compress files, but it is commonly used together with compression tools like gzip, bzip2, or xz.
+- use man tar to check how to use it
+- tar cvf backup.tar file?.txt dir? Shakespeare.txt
+
+# Searching the Filesystem
+- use the find command
+- let’s say we want to search files that start with the word file
+- find . -name ‘file*.txt’
+- note that the previous example is case sensitive. if you want one that’s not case sensitive then do this:
+- find . iname ‘file*.txt’
+- another command we can use is locate. locate makes use of the database to find files.
+- locate file.txt
+- or locate file*.txt
+- The last two commands are used to find commands instead of files
+- eg: which ls (this looks for the path for ls command)
+- eg: whereis ls
+
   
