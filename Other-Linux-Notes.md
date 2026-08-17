@@ -110,7 +110,7 @@ it takes you to: /home/nathi
 - let’s say we want to search files that start with the word file
 - find . -name ‘file*.txt’
 - note that the previous example is case sensitive. if you want one that’s not case sensitive then do this:
-- find . iname ‘file*.txt’
+- find . iname 'file*.txt'
 - another command we can use is locate. locate makes use of the database to find files.
 - locate file.txt
 - or locate file*.txt
