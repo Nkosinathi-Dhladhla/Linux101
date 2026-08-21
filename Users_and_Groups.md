@@ -39,3 +39,8 @@
 - E.g: chown sally hello.txt
 - or sudo chown sally hello.txt
 - You could also use chgrp command
+
+# Changing Users
+- Some users are able to run commands as another user using the sudo command
+- Previously we stated that passwords are stored in the shadow password file. That file is /etc/shadow
+- To access a file that requires root level access use sudo. e.g: sudo cat /etc/shadow 
