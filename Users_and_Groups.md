@@ -43,4 +43,9 @@
 # Changing Users
 - Some users are able to run commands as another user using the sudo command
 - Previously we stated that passwords are stored in the shadow password file. That file is /etc/shadow
-- To access a file that requires root level access use sudo. e.g: sudo cat /etc/shadow 
+- To access a file that requires root level access such as a password file use sudo. e.g: sudo cat /etc/shadow
+- If you want to perform a certain task as another user i.e sally then you would have to use the command: sudo -u sally cat /home/sally/sample.txt
+- If you want to change to a different user to perform multiple commands then you can use the following: su sally
+
+# Changing passwords
+- use the command passwd then add your own password then the new password
